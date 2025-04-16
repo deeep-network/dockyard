@@ -1,0 +1,51 @@
+# Riptide Configuration
+
+# Global settings
+settings:
+  servicePollInterval: 5000
+  exitLogs:
+    enabled: true      # Enable capturing exit logs
+    lines: 50          # Number of log lines to capture
+    includeTimestamps: true  # Include timestamps in logs
+    cooldownPeriod: 30000    # Minimum time between log captures (ms)
+  healthCheck:
+    failureThreshold: 3      # Default number of consecutive failures before restarting
+    interval: 15000           # How often to check container health (ms)
+    gracePeriod: 10000       # Grace period after container start before health checks begin (ms)
+
+# Containers to manage
+containers:
+  # - name: deep-web-app
+  #   image: nginx:latest
+  #   ports:
+  #     - "8080:80"
+  #   autoRestart: true
+
+  # - name: cornucopias
+  #   image: cornucopias
+  #   ports:
+  #     - "8001:8001"
+  #   autoRestart: true
+  #   exitLogs:
+  #     lines: 100
+  #   healthCheck:
+  #     failureThreshold: 5  # Restart after 5 consecutive failures
+  #     interval: 10000      # Check every 10 seconds
+  #     gracePeriod: 30000   # Wait 30 seconds after start before health checking
+  #   secrets:
+  #     - FILENODES_POOL_PUBLIC_PORT
+  #     - FILENODES_POOL_ACCESS_KEY
+  #   volumes:
+  #     - "[CONTAINER_DATA_PATH]/cache:/cache"
+
+  # - name: myria
+  #   image: myria
+  #   autoRestart: true 
+
+  # - name: system
+  #   image: system
+  #   autoRestart: true
+
+  # - name: dummy
+  #   image: dummy
+  #   autoRestart: true
