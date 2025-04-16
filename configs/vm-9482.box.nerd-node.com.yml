@@ -38,9 +38,9 @@ containers:
   #   volumes:
   #     - "[CONTAINER_DATA_PATH]/cache:/cache"
 
-  # - name: myria
-  #   image: myria
-  #   autoRestart: true 
+  - name: myria
+    image: myria
+    autoRestart: true 
 
   # - name: system
   #   image: system
